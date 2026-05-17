@@ -96,7 +96,7 @@ make -j
 После успешной сборки будет создан исполняемый файл:
 `backend/build/system_monitor`
 
-Запуск
+## Запуск
 
 Из директории backend/build:
 
@@ -109,11 +109,17 @@ make -j
 `http://localhost:8080`
 
 ## Доступ к приложению
+
 Web-интерфейс
+
 `http://localhost:8080/`
+
 JSON API
+
 `http://localhost:8080/api/system`
+
 Health Check
+
 `http://localhost:8080/health`
 
 ## Завершение работы
