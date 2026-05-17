@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Monitor</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>System Monitor</h1>
+            <p class="subtitle">Linux Resource Usage Dashboard</p>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <h2>System</h2>
+                <p><strong>Hostname:</strong> <span id="hostname"></span></p>
+                <p><strong>Uptime:</strong> <span id="uptime"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>CPU</h2>
+                <p><span id="cpu"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Memory</h2>
+                <p><span id="ram"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Disk</h2>
+                <p><span id="disk"></span></p>
+            </div>
+
+            <div class="card">
+                <h2>Network</h2>
+                <p><span id="network"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="dist/app.js"></script>
+</body>
+</html>

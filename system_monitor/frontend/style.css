@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+
+    color: #f8fafc;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    position: relative;
+    padding: 28px;
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    border-radius: 20px 20px 0 0;
+
+    background: linear-gradient(
+        90deg,
+        #38bdf8,
+        #818cf8,
+        #a78bfa
+    );
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(56, 189, 248, 0.35);
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.45),
+        0 0 20px rgba(56, 189, 248, 0.10);
+}
+
+.card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+.card strong {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.card span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .grid {
+        gap: 16px;
+    }
+}
